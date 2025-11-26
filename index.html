@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="" class="portfolio-name" style="font-size: 40px; text-decoration: none;">Ralph Brent Marcelo</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <button id="scrollToTopBtn" onclick="scrollToTop()">Go to Top</button>
+        <section class="about" id="about">
+            <h1>About me</h1>
+                <div class="about-content">
+                    <img id="me" src="/assets/me.jpg" alt="picture of me">
+                    
+                    <div class="about-p-container">
+                        
+                        <p class="about-p"><button onclick="Play()" id="chillguy">Just a chill guy.</button>Aspiring to be a web developer</p>
+                        <p id="about-p">Address: 1234 Libis Espina Caloocan City</p>
+                        <p id="about-p">Phone number: (123)-456-7890</p>
+                        <p id="about-p">Email address: bertlog23@gmail.com</p>
+                    </div>
+                </div>
+        </section>
+        
+        <section class="skills" id="skills">
+            <h1>Skills & Hobbies</h1>
+            <div class="skills-content">
+
+                <div class="skills-list">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="img-wrapper">
+                    <img id="img-item" src="/assets/htmlicon.png" alt="html icon">
+                    <img id="img-item" src="/assets/cssicon.png" alt="css icon">
+                    <img id="img-item" src="/assets/jsicon.png" alt="javascript icon">
+                    <img id="img-item" src="/assets/reacticon.svg" alt="react icon">
+                </div>
+                <div class="hobbies-list">
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Learning</li>
+                        <li>Meditating</li>
+                        <li>Exercising</li>
+                        <li>Reading</li>
+                    </ul>
+                </div>
+                    
+            </div>
+        </section>
+
+        <section class="education" id="education">
+            <h1>Education</h1>
+            <div class="education-content">
+                <ul class="school-list">
+                    <p id="school-info">Systems Plus Computer College - Caloocan</p>
+                    <p id="school-info">Bachelor of Science in Information Technology</p>
+                    <p id="school-info">2023-2025</p>
+                </ul>
+                <ul class="school-list">
+                    <p id="school-info">University of the East - Caloocan</p>
+                    <p id="school-info">Bachelor of Science in Information Technology</p>
+                    <p id="school-info">2022-2023</p>
+                </ul>
+                <ul class="school-list">
+                    <p id="school-info">AMA Computer College - Caloocan</p>
+                    <p id="school-info">Information and Communication Technologies</p>
+                    <p id="school-info">2020-2022</p>
+                </ul>
+            </div>
+
+    </main>
+    <footer>
+        <a href="https://www.facebook.com/rhbnt" target="_blank">Facebook</a>
+        <a href="https://github.com/rhbntm" target="_blank">Github</a>
+        <p style="font-size: 15px; padding-top: 10px;"> 2025 Ralph Brent Marcelo. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        const audio = new Audio('assets/audio.mp3');
+        audio.volume = 0.5;
+        let isPlaying = false;
+
+        const Play = () => {
+            isPlaying ? (audio.pause(), isPlaying = false) : (audio.play(), isPlaying = true);
+        };
+
+        scrollToTop = () => {
+            window.scrollTo({top: 0});
+        }
+
+        window.onscroll = () => {
+            let button = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                button.style.display = "block"; 
+            } else {
+                button.style.display = "none"; 
+            }
+        };
+    </script>
+    
+
+
+</body>
+</html>
